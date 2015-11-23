@@ -9087,5 +9087,17 @@ a.button {
   .main h2 {
     color: #fff; }
 
+.colors {
+  background-color: #F58F84 !important; }
+
+.learn {
+  background-color: #86ABA5 !important; }
+
+.meaning {
+  background-color: #FA9258 !important; }
+
+.play {
+  background-color: #6B9362 !important; }
+
 .splash {
-  background-color: #4F284B; }
+  background-color: #F58F84 !important; }

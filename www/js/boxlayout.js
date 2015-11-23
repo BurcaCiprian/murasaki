@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -43,9 +43,9 @@ var Boxlayout = (function() {
 	}
 
 	function initEvents() {
-		
+
 		$sections.each( function() {
-			
+
 			var $section = $( this );
 
 			// expand the clicked section and scale down the others
@@ -53,11 +53,12 @@ var Boxlayout = (function() {
 
 				if( !$section.data( 'open' ) ) {
 					$section.data( 'open', true ).addClass( 'bl-expand bl-expand-top' );
-					$el.addClass( 'bl-expand-item' );	
+					$el.addClass( 'bl-expand-item' );
+
 				}
 
 			} ).find( 'span.bl-icon-close' ).on( 'click', function() {
-				
+
 				// close the expanded section and scale up the others
 				$section.data( 'open', false ).removeClass( 'bl-expand' ).on( transEndEventName, function( event ) {
 					if( !$( event.target ).is( 'section' ) ) return false;
@@ -69,7 +70,7 @@ var Boxlayout = (function() {
 				}
 
 				$el.removeClass( 'bl-expand-item' );
-				
+
 				return false;
 
 			} );
@@ -95,7 +96,7 @@ var Boxlayout = (function() {
 
 		// navigating the work items: current work panel scales down and the next work panel slides up
 		$nextWorkItem.on( 'click', function( event ) {
-			
+
 			if( isAnimating ) {
 				return false;
 			}
@@ -115,7 +116,7 @@ var Boxlayout = (function() {
 				$currentPanel.removeClass( 'bl-hide-current-work' );
 				isAnimating = false;
 			}
-			
+
 			$nextPanel.addClass( 'bl-show-work' );
 
 			return false;
@@ -129,7 +130,7 @@ var Boxlayout = (function() {
 			$sectionWork.removeClass( 'bl-scale-down' );
 			$workPanelsContainer.removeClass( 'bl-panel-items-show' );
 			$workPanels.eq( currentWorkPanel ).removeClass( 'bl-show-work' );
-			
+
 			return false;
 
 		} );

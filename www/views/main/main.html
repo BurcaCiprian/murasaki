@@ -1,40 +1,37 @@
 <ion-view hide-nav-bar="true" class="main">
     <ion-content scroll="false">
 
-      <div class="container">
+          <div class="container">
       			<div id="bl-main" class="bl-main">
-      				<section class="animated jello" ng-click>
+      				<section class="animated jello" on-tap="main.sectionTap('seeColors')">
       					<div class="bl-box animated rubberBand">
       						<h2 class="bl-icon bl-icon-about">See colors</h2>
       					</div>
-
-      					<span class="bl-icon bl-icon-close"></span>
       				</section>
-      				<section id="bl-work-section"  class="animated jello">
+
+      				<section id="bl-work-section"  class="animated jello" on-tap="main.sectionTap('meaning')">
       					<div class="bl-box animated rubberBand">
       						<h2 class="bl-icon bl-icon-works">Meaning</h2>
       					</div>
-
-      					<span class="bl-icon bl-icon-close"></span>
       				</section>
-      				<section  class="animated jello">
+
+      				<section  class="animated jello" on-tap="main.sectionTap('play')">
       					<div class="bl-box animated rubberBand">
       						<h2 class="bl-icon bl-icon-blog">Play</h2>
       					</div>
-      					<span class="bl-icon bl-icon-close"></span>
       				</section>
-      				<section  class="animated jello">
+
+      				<section  class="animated jello" on-tap="main.sectionTap('learn')">
       					<div class="bl-box animated rubberBand">
       						<h2 class="bl-icon bl-icon-contact">Learn</h2>
       					</div>
-
-      					<span class="bl-icon bl-icon-close"></span>
       				</section>
       				<!-- Panel items for the works -->
 
       			</div>
       		</div><!-- /container -->
           <script src="js/boxlayout.js"></script>
+
           <script>
             $(function() {
               Boxlayout.init();

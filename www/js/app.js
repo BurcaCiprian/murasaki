@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('murasaki', ['ionic'])
+angular.module('murasaki', ['ionic', 'controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -15,6 +15,8 @@ angular.module('murasaki', ['ionic'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+
   });
 })
 
@@ -74,14 +76,44 @@ angular.module('murasaki', ['ionic'])
 
   .state('splash', {
       url: '/splash',
-      templateUrl: 'views/splash/splash.html'
+      templateUrl: 'views/splash/splash.html',
+      controller: 'SplashCtrl as splash'
   })
 
   .state('main', {
       url: '/main',
-      templateUrl: 'views/main/main.html'
+      cache: false,
+      templateUrl: 'views/main/main.html',
+      controller: 'MainCtrl as main'
   })
 
+  .state('colors', {
+      url: '/colors',
+      cache: false,
+      templateUrl: 'views/colors/colors.html',
+      controller: 'ColorsCtrl as colors'
+  })
+
+  .state('learn', {
+      url: '/learn',
+      cache: false,
+      templateUrl: 'views/learn/learn.html',
+      controller: 'LearnCtrl as learn'
+  })
+
+  .state('meaning', {
+      url: '/meaning',
+      cache: false,
+      templateUrl: 'views/meaning/meaning.html',
+      controller: 'MeaningCtrl as meaning'
+  })
+
+  .state('play', {
+      url: '/play',
+      cache: false,
+      templateUrl: 'views/play/play.html',
+      controller: 'PlayCtrl as play'
+  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/main');
